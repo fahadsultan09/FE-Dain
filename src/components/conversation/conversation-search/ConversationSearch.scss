@@ -2,6 +2,7 @@
 
 #search-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     grid-area: search-container;
     background: $primary-color;
@@ -11,8 +12,7 @@
     z-index: 1;
 
     input {
-        width: 0;
-        flex: 1 0 0;
+        flex: 1;
         color: $accent-color;
         outline: none;
         font-weight: bold;
@@ -30,5 +30,38 @@
     input::placeholder {
         color: $light-grey-border;
         font-weight: bold;
+    }
+
+    .react-datetime-picker {
+        margin-left: 20px;
+        
+        .react-datetime-picker__wrapper {
+            border: none;
+            background: transparent;
+            color: $accent-color;
+            font-weight: bold;
+            font-size: 1.4rem;
+            height: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .react-datetime-picker__inputGroup {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .react-datetime-picker__inputGroup__input {
+            background: transparent;
+            border: none;
+            color: $accent-color;
+            text-align: center;
+            min-width: 0;
+        }
+
+        .react-datetime-picker__inputGroup__divider {
+            color: $accent-color;
+        }
     }
 }

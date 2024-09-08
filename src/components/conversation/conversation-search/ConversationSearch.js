@@ -1,18 +1,18 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import './ConversationSearch.scss';
+import DateTimePicker from 'react-datetime-picker';
 
 const ConversationSearch = ({ conversations }) => {
-    let searchInput = null;
-
-    if (conversations && conversations.length > 0) {
-        searchInput = <input type="text" placeholder="Search" />;
-    }
+    const [dateTime, setDateTime] = useState(new Date());
 
     return (
-        <div id="search-container">
-            { searchInput }
-        </div>
+        <>
+            <div id="search-container">
+                <input type="text" placeholder="Search" />
+                <input type="datetime-local" style={{ left: 0 }} />
+
+            </div>
+        </>
     );
 }
 

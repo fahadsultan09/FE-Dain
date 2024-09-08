@@ -33,7 +33,7 @@ const ChatShell = ({
     if (conversations.length > 0) {
         conversationContent = (
             <>
-                <MessageList conversationId={selectedConversation.id} />
+                <MessageList messages ={selectedConversation.chat_messages} conversationId={selectedConversation.id} />
             </>
         );
     }

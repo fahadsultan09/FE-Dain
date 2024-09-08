@@ -10,7 +10,7 @@ const ChatTitle = ({ selectedConversation, onDeleteConversation }) => {
     if (selectedConversation) {
         chatTitleContents = (
             <>
-                <span>{ selectedConversation.title }</span>
+                <span>{ selectedConversation.groupName }</span>
                 <div onClick={ () => { onDeleteConversation(); } } title="Delete Conversation">
                     <TrashIcon />
                 </div>

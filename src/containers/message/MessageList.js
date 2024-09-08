@@ -5,23 +5,24 @@ import { messagesRequested } from '../../store/actions';
 import Message from '../../components/message/Message';
 import './MessageList.scss';
 
-const MessageList = ({ conversationId, getMessagesForConversation, loadMessages }) => {
-    const messageDetails = getMessagesForConversation(conversationId);
-    const messages = messageDetails ? messageDetails.messages: null;
+const MessageList = ({ conversationId, messages }) => {
+    // const messageDetails = getMessagesForConversation(conversationId);
+    // const messages = messageDetails ? messageDetails.messages: null;
     let messageItems = null;
 
-    useEffect(() => {
-        if (!messageDetails) {
-            loadMessages(conversationId, null);
-        }
-    }, [messageDetails, loadMessages, conversationId])
+    // useEffect(() => {
+    //     if (!messageDetails) {
+    //         loadMessages(conversationId, null);
+    //     }
+    // }, [messageDetails, loadMessages, conversationId])
 
     if (messages && messages.length > 0) {
         messageItems = messages.map((message, index) => {
-            return <Message 
+            return <Message
                 key={index}
-                isMyMessage={message.isMyMessage}
-                message={message} />;
+                isMyMessage={index === 0}
+                message={message}
+                index={index} />;
         });
     }
 
