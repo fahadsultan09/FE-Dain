@@ -3,21 +3,17 @@
 #search-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     grid-area: search-container;
     background: $primary-color;
-    padding: 0 20px;
-    border-radius: 10px 0 0 0;
+    border-radius: none;
     box-shadow: 0 1px 3px -1px $shadow-box-color;
     z-index: 1;
-
+    gap: 4px;
     input {
         flex: 1;
-        color: $accent-color;
+        color: $pink-color;
         outline: none;
         font-weight: bold;
-        border-radius: 2px;
-        height: 30px;
         border: 0;
         padding-left: 48px;
         padding-right: 20px;
@@ -32,36 +28,36 @@
         font-weight: bold;
     }
 
-    .react-datetime-picker {
-        margin-left: 20px;
+    // .react-datetime-picker {
+    //     margin-left: 20px;
         
-        .react-datetime-picker__wrapper {
-            border: none;
-            background: transparent;
-            color: $accent-color;
-            font-weight: bold;
-            font-size: 1.4rem;
-            height: 30px;
-            display: flex;
-            align-items: center;
-        }
+    //     .react-datetime-picker__wrapper {
+    //         border: none;
+    //         background: transparent;
+    //         color: $accent-color;
+    //         font-weight: bold;
+    //         font-size: 1.4rem;
+    //         height: 30px;
+    //         display: flex;
+    //         align-items: center;
+    //     }
 
-        .react-datetime-picker__inputGroup {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+    //     .react-datetime-picker__inputGroup {
+    //         display: flex;
+    //         align-items: center;
+    //         gap: 0.5rem;
+    //     }
 
-        .react-datetime-picker__inputGroup__input {
-            background: transparent;
-            border: none;
-            color: $accent-color;
-            text-align: center;
-            min-width: 0;
-        }
+    //     .react-datetime-picker__inputGroup__input {
+    //         background: transparent;
+    //         border: none;
+    //         color: $accent-color;
+    //         text-align: center;
+    //         min-width: 0;
+    //     }
 
-        .react-datetime-picker__inputGroup__divider {
-            color: $accent-color;
-        }
-    }
+    //     .react-datetime-picker__inputGroup__divider {
+    //         color: $accent-color;
+    //     }
+    // }
 }
